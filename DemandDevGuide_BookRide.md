@@ -117,7 +117,7 @@ To book a ride, the client first requests ride offers according to the required 
 4.  Call *CreateRideRequest*, passing the ID of the chosen offer. If successful, this call returns a **Ride** object.
 
 >**Notes**: 
->* The initial status of the returned **Ride** object will be PROCESSING, meaning that the ride is waiting for the supplier to accept the booking and assign a driver. Call *GetRide* repeatedly to track the ride's status changes.
+>* The initial status of the returned **Ride** object will be **PROCESSING**, meaning that the ride is waiting for the supplier to accept the booking and assign a driver. Call *GetRide* repeatedly to track the ride's status changes. The status will either change to **REJECTED**, or it will change to **ACCEPTED** and subsequently to **DRIVER_ASSIGNED**.
 >* This workflow may be repeated as necessary, if a booking request fails.
 
 ----
