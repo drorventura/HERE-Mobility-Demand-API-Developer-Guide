@@ -43,6 +43,8 @@ You may want to cancel a ride at any stage during the ride's lifecycle, followin
 
 </details>
 
+----
+
 2. Call **GetRide** repeatedly and examine the **status** value of the **CancellationInfo** field. Its value will be one of: **PROCESSING** (cancellation is still being processed), **ACCEPTED** (the cancellation was accepted) or **REJECTED** (the cancellation was rejected). See [Getting a Ride Object](https://github.com/Developers-Here-Mobility/HERE-Mobility-Demand-API-Developer-Guide/blob/master/DemandDevGuide_GetRide.md) to learn more about the **GetRide** call.
 
 
