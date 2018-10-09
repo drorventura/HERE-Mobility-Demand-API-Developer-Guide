@@ -9,11 +9,23 @@ You may want to poll periodically for the ride location, for example so that you
 
 Call *GetRideLocation*. This returns a **RideLocation** object that contains the ride’s geo-location, and optionally the estimated time of arrival at the pickup or dropoff location.
 
->**Note:** This call is identical for the C2S and S2S APIs.
+----
+<details>
+<summary><b>REST C2S Example</b></summary>
+
+**Request:**
+
+    COMING SOON
+
+**Response:**
+
+	COMING SOON
+
+</details>
 
 ----
 <details>
-<summary><b>REST Example</b></summary>
+<summary><b>REST S2S Example</b></summary>
 
 **Request:**
 
@@ -28,7 +40,7 @@ Call *GetRideLocation*. This returns a **RideLocation** object that contains the
 ----
 
 <details>
-<summary><b>GRPC Example</b></summary>
+<summary><b>GRPC C2S Example</b></summary>
 
 **Request:**
 
@@ -38,6 +50,21 @@ Call *GetRideLocation*. This returns a **RideLocation** object that contains the
 **Response:**
 
     COMING SOON
+
+</details>
+
+----
+
+<details>
+<summary><b>GRPC S2S Example</b></summary>
+
+**Request:**
+
+    COMING SOON
+
+**Response:**
+
+	COMING SOON
 
 </details>
 
