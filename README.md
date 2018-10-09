@@ -17,3 +17,4 @@ This guide describes how to integrate with the HERE Demand API, and how to imple
 	- [Cancelling a Ride](DemandDevGuide_CancelRide.md)
 	- [Querying for Rides](DemandDevGuide_QueryRides.md)
 - [Here Demand API Response Codes ](DemandDevGuide_ResponseCodes.md)
+- [More Information Ride Cancellation](https://github.com/Developers-Here-Mobility/HERE-Mobility-Demand-API-Developer-Guide/blob/master/DemandDevGuide_RideCancellationDetails.md)
