@@ -5,7 +5,6 @@ You may want to cancel a ride at any stage during the ride's lifecycle, followin
 >**Notes:** 
 >* Whether ride cancellation is allowed depends on the supplier's policy. If cancellation isn't allowed, the call to *CancelRide* will result in a **REJECTED** cancellation status.
 >* *CancelRide* will fail if you try to cancel a ride that isn't active.
->* The *CancelRide* call is identical for the C2S and S2S APIs.
 >* The processing of the *CancelRide* call is asynchronous. After you receive a successful response to *CancelRide*, you must poll the Ride object by calling *GetRide* (see the procedure below).
 >* See [More Information Ride Cancellation](https://github.com/Developers-Here-Mobility/HERE-Mobility-Demand-API-Developer-Guide/blob/master/DemandDevGuide_RideCancellationDetails.md) to learn more about cancellation policies and cancellation reasons.
 
