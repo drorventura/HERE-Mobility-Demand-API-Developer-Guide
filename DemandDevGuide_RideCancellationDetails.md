@@ -23,7 +23,7 @@ Field | Type | Description
 :-----|:-----|:-----------
 cancellation_policy | RideOffer.CancellationPolicy | The supplier's cancellation policy. Possible values are: **UNKNOWN_CANCEL_POLICY**, **ALLOWED**, **NOT_ALLOWED**
 cancellation_info | CancellationInfo | Optional. When a cancellation occurs, this field contains information about the cancellation. See more details below.
-cancellation_info.cancelling_party | CancellationInfo.Party | Which party canceled the ride.
+cancellation_info.cancelling_party | CancellationInfo.Party | Which party canceled the ride. Possible values are: **UNKNOWN**, **DEMANDER**, **SUPPLIER**.
 cancellation_info.cancel_reason | string | A free-text cancellation reason entered by the cancelling party.
 cancellation_info.request_time_ms | uint64 | The time the cancellation was requested.
 cancellation_info.status | CancellationInfo.Status | Possible values are: **PROCESSING**, **ACCEPTED**, **REJECTED**.
