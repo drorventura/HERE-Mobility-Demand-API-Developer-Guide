@@ -48,7 +48,7 @@ PASSENGER_NO_SHOW | Supplier | The supplier cancelled because the passenger did 
 PASSENGER_REQUESTED_TO_CANCEL | Supplier | The supplier cancelled because the passenger spoke to the driver and requested a cancellation.
 VEHICLE_MALFUNCTION | Supplier | The supplier cancelled because of a malfunction in the vehicle.
 HEAVY_TRAFFIC | Supplier | The supplier cancelled because heavy traffic is preventing the driver from arriving.
-OTHER_CANCEL_REASON_CATEGORY | Passenger or Supplier | Either the passenger or the supplier cancelled for any reason other than the above.<br/>>**Note:** If you use the OTHER cancellation reason, we recommend filling the free-text **cancellation_info.cancel_reason** field with a user-defined entry.
+OTHER_CANCEL_REASON_CATEGORY | Passenger or Supplier | Either the passenger or the supplier cancelled for any reason other than the above.<br/><br/>**Note:** If you use the OTHER cancellation reason, we recommend filling the free-text **cancellation_info.cancel_reason** field with a user-defined entry.
 
 
 
