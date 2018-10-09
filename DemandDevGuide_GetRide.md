@@ -9,11 +9,9 @@ After booking a ride and creating a **Ride** object, you can retrieve the **Ride
 
 Call *GetRide*, passing the **ride_id** value that you received as a response to *CreateRide*. This returns a **Ride** object that contains several ride details, including the ride's current status and a list of its previous statuses.
 
->**Note:** This call is identical for the C2S and S2S APIs.
-
 ----
 <details>
-<summary><b>REST Example</b></summary>
+<summary><b>REST C2S Example</b></summary>
 
 **Request:**
 
@@ -87,7 +85,39 @@ Call *GetRide*, passing the **ride_id** value that you received as a response to
 ----
 
 <details>
-<summary><b>GRPC Example</b></summary>
+<summary><b>REST S2S Example</b></summary>
+
+**Request:**
+
+    COMING SOON
+
+
+**Response:**
+
+    COMING SOON
+
+</details>
+
+----
+
+<details>
+<summary><b>GRPC C2S Example</b></summary>
+
+**Request:**
+
+    COMING SOON
+
+
+**Response:**
+
+    COMING SOON
+
+</details>
+
+----
+
+<details>
+<summary><b>GRPC S2S Example</b></summary>
 
 **Request:**
 
