@@ -10,9 +10,9 @@ See [Cancellation Information in the Ride Object](#InfoInRideObject) to learn ab
 
 ## Cancellation Policy ##
 
-Different suppliers have different cancellation policies. Some allow cancellations with no fine or fee, and some do not. Each ride offer has a **CancellationPolicy** field, whose value you can test to see whether cancellation is allowed for the specific ride offer or not. This field also appears in the **Ride** object.
+Different suppliers have different cancellation policies. Some allow cancellations with no fine or fee, and some do not. Each ride offer has a **CancellationPolicy** field, whose value you can test to see whether cancellation is allowed for the specific ride offer or not. This field also appears in the **Ride** object. If the policy is to not allow cancellations, the passenger may have to pay the full fee, even if he or she doesn't actually take the ride.
 
-If a request to cancel a ride is rejected, this means that the supplier's policy does not allow cancellations, and in this case the passenger may have to pay the full fee, even if he or she doesn't actually take the ride.
+A request to cancel a ride may be rejected, either because the supplier's policy does not allow cancellations, or for any other internal reason of the supplier.
 
 <a name="InfoInRideObject"></a>
 ## Cancellation Information in the Ride Object ##
