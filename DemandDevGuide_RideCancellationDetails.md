@@ -2,9 +2,9 @@
 
 A ride may be cancelled either by the passenger or by the supplier/driver, at any stage after the passenger requests to book it.
 
-If the passenger requests to cancel a ride, your demand-side application must call the [*CancelRide* API](https://github.com/Developers-Here-Mobility/HERE-Mobility-Demand-API-Developer-Guide/blob/master/DemandDevGuide_CancelRide.md).
+If the passenger requests to cancel a ride, the demand-side application must call the [*CancelRide* API](https://github.com/Developers-Here-Mobility/HERE-Mobility-Demand-API-Developer-Guide/blob/master/DemandDevGuide_CancelRide.md).
 
-If the supplier or driver cancels a ride, it's the supply-side application's responsibility to change the ride's status to **CANCELLED**. The next time your demand-side application calls *GetRide*, the **Ride** object's **Status** value will be **CANCELLED**, and your application must handle this situation appropriately.
+If the supplier or driver cancels a ride, it's the supply-side application's responsibility to change the ride's status to **CANCELLED**. The next time the demand-side application calls *GetRide*, the **Ride** object's **Status** value will be **CANCELLED**, and the client application must handle this situation appropriately.
 
 See [Cancellation Information in the Ride Object](#InfoInRideObject) to learn about additional cancellation information in the **Ride** object.
 
