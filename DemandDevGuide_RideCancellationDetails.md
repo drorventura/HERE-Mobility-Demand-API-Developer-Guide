@@ -1,4 +1,4 @@
-# More Information Ride Cancellation #
+# More Information About Ride Cancellation #
 
 A ride may be cancelled either by the passenger or by the supplier/driver, at any stage after the passenger requests to book it.
 
