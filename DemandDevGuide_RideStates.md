@@ -17,6 +17,7 @@ PASSENGER_ON_BOARD	| The passenger is onboard; the vehicle is en route to the dr
 AT_DROPOFF	| The vehicle is at the dropoff location
 COMPLETED	| The ride was completed successfully
 CANCELLED	| The ride was cancelled by the supplier or by the client.
+FAILURE | The ride was closed by HERE Marketplace due to connection timeout.
 
 
 ## Ride State Transitions ##
