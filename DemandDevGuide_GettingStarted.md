@@ -44,8 +44,23 @@ Here is an example of how to create a Service-to-Service (S2S) token:
 
 ```GET accounts.v1/application/s2s/token?application_key=<application_key>&&application_secret=<application_secret>```
 
-### Sandbox and Production Environments ###
+## Sandbox and Production Environments ##
 
 You can use the HERE Mobility Sandbox platform to develop and test your app's functionality without calling the production platform. Requests to the sandbox environment are ephemeral (do not affect the "real world").
 
 The HERE Mobility service directs your app's calls to the sandbox or to the production environment, according to the API key you provide.
+
+## Registering a Webhook for Marketplace-Initiated Updates ##
+
+The HERE Marketplace can send updates about a ride's status, location, ETA and price.
+In your application, you must implement a webhook callback function to handle these updates.
+(See [Handling Update Messages](DemandDevGuide_HandlingUpdateMessages.md) to learn more about the possible update messages.)
+
+During the onboarding stage, you must supply the HERE support team with the following details about your webhook function:
+* **Protocol** - the protocol that the webhook supports (GRPC or REST)
+* **Version** - the Demand API version you're working with
+* **Endpoint** - the webhook's URL and port
+* **Token** - the authentication token supplied by HERE
+* **Timeout** - the number of seconds the Marketplace should wait when calling the webhook, before a timeout is declared
+
+>**Note:** You must supply webhook details for each of your applications, and for both Sandbox and Production environments.
