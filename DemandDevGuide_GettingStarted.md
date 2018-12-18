@@ -53,10 +53,11 @@ The HERE Mobility service directs your app's calls to the sandbox or to the prod
 ## Registering a Webhook for Marketplace-Initiated Updates ##
 
 The HERE Marketplace can send updates about a ride's status, location, ETA and price.
-In your application, you must implement a webhook callback function to handle these updates.
+In your application, you must implement a webhook service to handle these updates.
 (See [Handling Update Messages](DemandDevGuide_HandlingUpdateMessages.md) to learn more about the possible update messages.)
 
-During the onboarding stage, you must supply the HERE support team with the following details about your webhook function:
+During the onboarding stage, you must supply the HERE support team with the following details about your webhook:
+
 * **Protocol** - the protocol that the webhook supports (GRPC or REST)
 * **Version** - the Demand API version you're working with
 * **Endpoint** - the webhook's URL and port
