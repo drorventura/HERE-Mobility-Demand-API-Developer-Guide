@@ -7,6 +7,8 @@ Throughout the lifecycle of a ride, the HERE Marketplace can send updates about 
 * HandlePriceUpdate
 * HandleLocationUpdate
 
+>**Note:** See [Getting Started](DemandDevGuide_GettingStarted.md) to learn more about how to register your webhook service.
+
 You can also request this information actively, by calling *GetRide* and *GetRideLocation*, and we recommend that you do this occasionally. However, it's inefficient to poll for this information frequently, and this is why Marketplace-initiated updates are useful, as they're sent only when a change has occurred.
 
 When you receive an update about a ride, you can choose how to convey this information to the end user (display it within your app, send an SMS, etc.).
