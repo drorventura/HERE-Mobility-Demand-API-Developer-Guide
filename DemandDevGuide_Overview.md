@@ -19,10 +19,10 @@ HERE supports several types of packages and interfaces to the Mobility Demand fu
 
 Package | Supported Platforms/Interfaces | Description
 :--------|:----------------------------|:------------
-Demand SDK | iOS, Android | SDK for mobile devices
-Demand React Native Kit | iOS, Android | React Native Javascript wrapper for mobile devices
-Demand API Consumer-to-Service (C2S) | REST, GRPC | API for a single user (typically used by a mobile device app)
-Demand API Service-to-Service (S2S) | REST, GRPC | API for managing multiple users
+Demand **SDK** | iOS, Android | SDK for mobile devices
+Demand React Native **SDK** | iOS, Android | React Native Javascript wrapper SDK for mobile devices
+Demand Consumer-to-Service (C2S) **API** | REST, GRPC | API for a single user (typically used by a mobile device app)
+Demand Service-to-Service (S2S) **API** | REST, GRPC | API for managing multiple users
 
 ## Introduction to the HERE Demand API ## 
 
