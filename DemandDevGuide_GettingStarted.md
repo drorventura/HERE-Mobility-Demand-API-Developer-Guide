@@ -64,4 +64,4 @@ During the onboarding stage, you must supply the HERE support team with the foll
 * **Token** - the authentication token supplied by HERE
 * **Timeout** - the number of seconds the Marketplace should wait when calling the webhook, before a timeout is declared
 
->**Note:** You must supply webhook details for each of your applications, and for both Sandbox and Production environments.
+>**Note:** You should supply webhook details for each of your applications, and for both Sandbox and Production environments.
