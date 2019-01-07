@@ -1,6 +1,11 @@
 # HERE Demand API Workflow: *Handling Update Messages with Webhooks* #
 
-Throughout the lifecycle of a ride, the HERE Marketplace can send updates about the ride's status, location, ETA and price. In your application, you must implement a webhook callback function to handle these updates. The webhook must implement the **DemandWebhookAPI** service, which contains 4 functions: 
+Throughout the lifecycle of a ride, the HERE Marketplace can send updates about the ride's status, location, ETA and price. There are 2 ways your application can get updates about a ride's status and other details:
+
+* By calling the GetRide and GetRideLocation functions periodically (polling)
+* By implementing a webhook callback function (updates are pushed to your application by the HERE Marketplace)
+
+If you choose to use a webhook function, it must implement the **DemandWebhookAPI** service, which contains 4 functions: 
 
 * HandleStatusUpdate
 * HandleETAUpdate
