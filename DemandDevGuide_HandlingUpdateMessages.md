@@ -82,6 +82,10 @@ Here are examples of updates your webhook function can receive:
 
 **ETA Update Example:**
 
+>**Notes:** 
+>* The **estimated_pickup_time_seconds** field will only appear until the passenger is onboard.
+>* The **estimated_dropoff_time_seconds** will only appear once the passenger is onboard, and until dropoff or other terminal status.
+
 ```
 {
     "event_metadata": {
@@ -101,6 +105,8 @@ Here are examples of updates your webhook function can receive:
 
 
 **Location Update Example:**
+
+>**Note:** The **point** field contains the latitude and longitude values of the current vehicle location.
 
 ```
 {
