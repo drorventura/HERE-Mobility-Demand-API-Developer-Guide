@@ -2,8 +2,10 @@
 
 Throughout the lifecycle of a ride, the HERE Marketplace can send updates about the ride's status, location, ETA and price. There are 2 ways your application can get updates about a ride's status and other details:
 
-* By calling the GetRide and GetRideLocation functions periodically (polling)
+* By calling the *GetRide* and *GetRideLocation* functions periodically (polling)
 * By implementing a webhook callback function (updates are pushed to your application by the HERE Marketplace)
+
+>**Note:** Currently only GRPC webhooks are supported.
 
 If you choose to use a webhook function, it must implement the **DemandWebhookAPI** service, which contains 4 functions: 
 
@@ -14,7 +16,7 @@ If you choose to use a webhook function, it must implement the **DemandWebhookAP
 
 >**Note:** See [Getting Started](DemandDevGuide_GettingStarted.md) to learn how to register your webhook service.
 
-You can also request this information actively, by calling *GetRide* and *GetRideLocation*, and we recommend that you do this occasionally. However, it's inefficient to poll for this information frequently, and this is why Marketplace-initiated updates are useful, as they're sent only when a change has occurred.
+As mentioned above, you can also request this information actively, by calling *GetRide* and *GetRideLocation*, and we recommend that you do this occasionally. However, it's inefficient to poll for this information frequently, and this is why Marketplace-initiated updates are useful, as they're sent only when a change has occurred.
 
 When you receive an update about a ride, you can choose how to convey this information to the end user (display it within your app, send an SMS, etc.).
 
