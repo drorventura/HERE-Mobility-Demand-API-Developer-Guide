@@ -18,7 +18,9 @@ You can also request this information actively, by calling *GetRide* and *GetRid
 
 When you receive an update about a ride, you can choose how to convey this information to the end user (display it within your app, send an SMS, etc.).
 
->**Note:** It's possible that the same update message will be sent more than once. Each update message has an **event_id** field with a unique ID value. Your app should discard messages that it's already received (as determined by the **event_id** value).
+>**Notes:** 
+>* It's possible that the same update message will be sent more than once. Each update message has an **event_id** field with a unique ID value. Your app should discard messages that it's already received (as determined by the **event_id** value).
+>* Each webhook message has an authentication token in its header. (This is the token you received when you registered your webhook.) Your application should always verify that you received the expected token value, and if not, discard the message without processing it.
 
 Here are examples of updates your webhook function can receive:
 
