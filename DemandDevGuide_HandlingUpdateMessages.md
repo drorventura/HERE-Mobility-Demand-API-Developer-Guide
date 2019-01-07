@@ -9,10 +9,9 @@ Throughout the lifecycle of a ride, the HERE Marketplace can send updates about 
 
 If you choose to use a webhook function, it must implement the **DemandWebhookAPI** service, which contains 4 functions: 
 
-* HandleStatusUpdate
-* HandleETAUpdate
-* HandlePriceUpdate
-* HandleLocationUpdate
+* HandleRideUpdate (contains info about ride status, driver and price details)
+* HandleETAUpdate (contains info about estimated pickup and dropoff times) 
+* HandleLocationUpdate (contains info about the ride's current location)
 
 >**Note:** See [Getting Started](DemandDevGuide_GettingStarted.md) to learn how to register your webhook service.
 
@@ -26,7 +25,54 @@ When you receive an update about a ride, you can choose how to convey this infor
 
 Here are examples of updates your webhook function can receive:
 
-**Status update:**
+**Ride update:**
+
+```
+{
+    "event_metadata": {
+                "event_time": ,
+                "event_id": "Ah723gdjahsvcnsac0xr823",
+                "demand_info": {
+                                "demander_id":"SomeDemander",
+                                "user_id": "SomeUser",
+                                "app_id": "SomeApp"
+                },
+                "ride_id": "Jfhdus84gfjdsgr634bjdskb"
+    },
+    "status_change": {
+                "status": "ACCEPTED",
+    },
+    "driver_vehicle_details": {
+                                "driver_details": {
+                                "name": "someDriver",
+                                "phone_number": "+555555555555",
+                                "photo_url": "http://someUrl...",
+                                "driving_license_id": "123456789"
+                },
+                "vehicle":{
+                                "license_plate_number": "123456789",
+                                "vehicle_type": "STANDARD",
+                                "make": "SomeMaker",
+                                "model": "SomeModel",
+                                "color": "Blue"
+                }
+    },
+    "cancellation_info": {
+                "cancelling_party": "DEMANDER",
+                                "cancel_reason": "changed my plans",
+                                "request_time_ms": 12341,
+                                "status": "PROCESSING",
+                                "cancel_reason_category": "PASSENGER_REQUESTED_TO_CANCEL"
+    },
+    "rejection_reason": {"value": "rejected by MP"},
+    "price": {
+                "amount": 120,
+                "currency_code": "USD"
+    }
+}
+```
+
+**ETA update:**
 
 	COMING SOON
 
@@ -36,11 +82,4 @@ Here are examples of updates your webhook function can receive:
 	COMING SOON
 
 
-**ETA update:**
 
-	COMING SOON
-
-
-**Price update:**
-
-	COMING SOON
