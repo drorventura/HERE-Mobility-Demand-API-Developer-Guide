@@ -22,11 +22,19 @@ When you receive an update about a ride, you can choose how to convey this infor
 >**Notes:** 
 >* It's possible that the same update message will be sent more than once. Each update message has an **event_id** field with a unique ID value. Your app should discard messages that it's already received (as determined by the **event_id** value).
 >* Each webhook message has an authentication token in its header. (This is the token you received when you registered your webhook.) Your application should always verify that you received the expected token value, and if not, discard the message without processing it.
+>* All update messages contain the mandatory **event_metadata** field (see examples below). 
 
 Here are examples of updates your webhook function can receive:
 
 **Ride Update Example:**
 
+>**Notes:** 
+>* The **status_change** field will appear only if the ride status has changed since the last update message.
+>* The **driver_vehicle_details** field will appear only if the relevant details have been provided by the ride Supplier.
+>* The **cancellation_info** field will appear if a cancellation was requested. It contains details such as the time of the cancellation request and the reason for cancellation.
+>* The **rejection_reason** field will appear only if the ride has been rejected.
+>* The **price** field will appear only when the Supplier has provided the *final* price.
+ 
 ```
 {
     "event_metadata": {
