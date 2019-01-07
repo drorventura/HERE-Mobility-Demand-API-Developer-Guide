@@ -32,3 +32,16 @@ In the case of a future booking, the driver is only assigned close to the ride t
 Whether ride cancellation is allowed depends on the supplier's cancellation policy. 
 If the policy does not allow for cancellation and a user cancels anyway, the user will have to pay a certain amount for the cancellation.
 
+## Estimated Time Fields ##
+
+The Demand API provides several fields related to time estimations in the different ride stages. Some estimates are provided by the ride supplier, and some are calculated by the HERE server.
+
+The following table summarizes the various time estimation fields.
+
+ Stage | Time Field | Description | Provided by: | Notes
+:----------|:-----------|:------------|:-------------|:------
+Booking | estimated_pickup_time_seconds  | The estimated time (in seconds) that it will take the driver to arrive at the pickup location | Supplier only. If the supplier doesn't provide this time, then this field is not provided. | Usually when this value is supplied during booking, it's before a driver was assigned, and therefore it may not be accurate. The same value when provided during an active ride (see below) will be more accurate.
+Booking | estimated_ride_duration_seconds | The estimated time (in seconds) that it will take to drive from pickup to dropoff location | The Supplier-provided value will be shown if available. Otherwise, HERE attempts to estimate the value based on traffic conditions and optimal route. | None
+Ride in progress | estimated_pickup_time_seconds | The estimated time (in seconds) that it will take the driver to arrive at the pickup location | The Supplier-provided value will be shown if available. Otherwise, HERE attempts to estimate the value based on the GPS location of the assigned driver. |- This value is usually more accurate than the value with the same name, when provided at the Booking stage.<br/>- This value will only be available from the second call to *GetRideLocation* and onward.<br/>- 	If driver is very close to the pickup location at the time of assignment, this time value may be NULL.
+Ride in progress | estimated_dropoff_time_seconds | The estimated time (in seconds) that it will take to drive from pickup to dropoff location | The Supplier-provided value will be shown if available. Otherwise, HERE attempts to estimate the value based on the GPS location of the assigned driver. | In any given update during the ride's progress, only one of the time values (either "pickup" or "dropoff") will be filled.
+
