@@ -25,7 +25,7 @@ When you receive an update about a ride, you can choose how to convey this infor
 
 Here are examples of updates your webhook function can receive:
 
-**Ride update:**
+**Ride Update Example:**
 
 ```
 {
@@ -72,14 +72,45 @@ Here are examples of updates your webhook function can receive:
 }
 ```
 
-**ETA update:**
+**ETA Update Example:**
 
-	COMING SOON
+```
+{
+    "event_metadata": {
+                "event_time": ,
+                "event_id": "Ah723gdjahsvcnsac0xr823",
+                "demand_info": {
+                                "demander_id":"SomeDemander",
+                                "user_id": "SomeUser",
+                                "app_id": "SomeApp"
+                },
+                "ride_id": "Jfhdus84gfjdsgr634bjdskb"
+    },
+    "estimated_pickup_time_seconds": {"value": 32},
+    "estimated_dropoff_time_seconds": {"value": 566}
+}
+```
 
 
-**Location update:**
+**Location Update Example:**
 
-	COMING SOON
-
+```
+{
+    "event_metadata": {
+                "event_time": ,
+                "event_id": "Ah723gdjahsvcnsac0xr823",
+                "demand_info": {
+                                "demander_id":"SomeDemander",
+                                "user_id": "SomeUser",
+                                "app_id": "SomeApp"
+                },
+                "ride_id": "Jfhdus84gfjdsgr634bjdskb"
+    },
+    "point": {
+                "lat": 32.123123,
+                "lng": 33.4444
+    }
+}
+```
 
 
