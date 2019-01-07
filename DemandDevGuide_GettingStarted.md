@@ -62,6 +62,6 @@ During the onboarding stage, you must supply the HERE support team with the foll
 * **Version** - the Demand API version you're working with
 * **Endpoint** - the webhook's URL and port
 * **Token** - the authentication token supplied by HERE
-* **Timeout** - the number of seconds the Marketplace should wait when calling the webhook, before a timeout is declared
+* **Timeout** - the number of seconds the Marketplace should wait when calling the webhook, before a timeout is declared. This value may be between 1 and 10 seconds (the default is 3 seconds).
 
 >**Note:** You should supply webhook details for each of your applications, and for both Sandbox and Production environments.
