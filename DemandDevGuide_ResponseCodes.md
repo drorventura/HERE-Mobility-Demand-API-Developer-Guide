@@ -80,16 +80,35 @@ The following table describes the error codes that Here API clients can receive:
 
 Domain|	Error|	Code
 :-----|:-----|:------
-Request	| Invalid request |	40000
-Request	|Requested item not found|	40400
-Request	|Request timeout|	40800
-Request	|Failed Dependency	|42400
-Connection	|Too many requests|	42900
---	|Internal server error|	50000
---	|Not Implemented|	50100
-Authorization	|Permission denied	|40300
-Authentication	|Invalid token|	40101
-Authentication	|Token expired	|40102
+Request	Ride | Invalid request |	400000
+Request Ride | Route missing from ride request | 400001
+Request Ride | Pickup location missing from ride request | 400002
+Request Ride | Geo-location missing from ride request | 400003
+Request Ride | Invalid latitude in ride request (should be between -90 and 90) | 400004
+Request Ride | Invalid longitude in ride request (should be between -90 and 90) | 400005
+Request Ride | Dropoff location missing from ride request | 400007
+Request Ride | Pickup time missing from ride request | 400009
+Request Ride | Pickup time is too far in the future | 400010
+Request Ride | Pickup time has passed | 400011
+Request Ride | Invalid maximum walking distance value | 400016
+Request Ride | Maximum number of transit changes exceeded | 400017
+Request	Ride | Requested item not found|	404000
+Request	Ride | Request timeout|	408000
+Request	Ride | Failed dependency	|424000
+Create Ride  | Attempt to book a ride whose offer has timed out | 404001
+Get Ride     | Requested ride not found | 404002
+Cancel Ride  | Attempt to cancel a ride whose ID can't be found | 400018
+Cancel Ride  | Invalid reason category format | 400019
+Cancel Ride  | Invalid reason category value | 400020
+Get Ride Offer |Missing or invalid offer ID | 400021
+Get Ride Offer |Missing or invalid demander ID | 400023
+Connection	   |Too many requests|	429000
+Authorization  |Permission denied	|403000
+Authentication |Invalid token|	401001
+Authentication |Token expired	|401002
+General        |Missing user ID | 400022
+General	       |Internal server error|	500000
+General	       |Not Implemented|	501000
 
 ## References ##
 
