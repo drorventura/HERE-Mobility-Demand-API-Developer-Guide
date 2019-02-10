@@ -83,37 +83,40 @@ Error Category	| Description
 
 The following table describes the error codes that Here API clients can receive:
 
-Domain|	Error|	Code
-:-----|:-----|:------
-Request	Ride | Invalid request |	400000
-Request Ride | Route missing from ride request | 400001
-Request Ride | Pickup location missing from ride request | 400002
-Request Ride | Geo-location missing from ride request | 400003
-Request Ride | Invalid latitude in ride request (should be between -90 and 90) | 400004
-Request Ride | Invalid longitude in ride request (should be between -90 and 90) | 400005
-Request Ride | Dropoff location missing from ride request | 400007
-Request Ride | Pickup time missing from ride request | 400009
-Request Ride | Pickup time is too far in the future | 400010
-Request Ride | Pickup time has passed | 400011
-Request Ride | Invalid maximum walking distance value | 400016
-Request Ride | Maximum number of transit changes exceeded | 400017
-Request	Ride | Requested item not found|	404000
-Request	Ride | Request timeout|	408000
-Request	Ride | Failed dependency	|424000
-Create Ride  | Attempt to book a ride whose offer has timed out | 404001
-Get Ride     | Requested ride not found | 404002
-Cancel Ride  | Attempt to cancel a ride whose ID can't be found | 400018
-Cancel Ride  | Invalid reason category format | 400019
-Cancel Ride  | Invalid reason category value | 400020
-Get Ride Offer |Missing or invalid offer ID | 400021
-Get Ride Offer |Missing or invalid demander ID | 400023
-Connection	   |Too many requests|	429000
-Authorization  |Permission denied	|403000
-Authentication |Invalid token|	401001
-Authentication |Token expired	|401002
-General        |Missing user ID | 400022
-General	       |Internal server error|	500000
-General	       |Not Implemented|	501000
+Domain|	Message | 	Code
+:-----|:--------|:-------
+General 		| Invalid request 																| 400000
+Get Ride 		| Route is missing   															| 400001	
+Get Ride 		| Pickup location is missing													| 400002	
+Get Ride 		| Pickup point is missing   													| 400003	
+Get Ride 		| Pickup latitude is invalid. Value should be between -90 and 90.    			| 400004
+Get Ride 		| Pickup longitude is invalid. Value should be between -180 and 180.    		| 400005
+Get Ride 		| Drop off location is missing   												| 400007	
+Request Ride 	| Pickup time missing from ride request 										| 400009
+Get Ride 		| Pickup cannot be booked for more than <MaxDays> days from the current date  	| 400010
+Get Ride 		| Pickup time cannot be in the past   											| 400011	
+Get Ride 		| Maximum walking distance chosen is not supported   							| 400016
+Get Offers 		| Invalid number of changes (maximum allowed transit changes was exceeded) 		| 400017
+Cancel Ride 	| Ride ID is invalid    														| 400018	
+Cancel Ride     | Invalid reason category format 												| 400019
+Cancel Ride     | Invalid reason category value 												| 400020
+Get Offers 		| Offer ID is missing or invalid   												| 400021	
+General		 	| User ID is missing   															| 400022	
+Get Offers 		| Demander ID is missing or invalid   											| 400023
+Get Ride 		| Drop off point is missing														| 400024
+Get Ride 		| Drop off latitude is invalid. Value should be between -90 and 90.				| 400025
+Get Ride 		| Drop off longitude is invalid. Value should be between -180 and 180.  		| 400026
+Authentication 	| Invalid token																	| 401001
+Authentication 	| Token expired																	| 401002
+General  		| Permission denied																| 403000
+General 		| Requested item not found 														| 404000
+Create Ride		| Offer timed out  																| 404001
+Get Ride 		| The ride requested can't be found    											| 404002	
+General 		| Request timeout																| 408000
+General 		| Failed dependency																| 424000
+General	   		| Too many requests																| 429000
+General	       	| Internal server error															| 500000
+General	       	| Not Implemented																| 501000
 
 ## References ##
 
