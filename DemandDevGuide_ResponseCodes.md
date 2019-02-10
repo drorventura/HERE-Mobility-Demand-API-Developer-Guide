@@ -22,15 +22,19 @@ In error situations, all endpoints return a GRPC Status object as defined below.
 
 The **Details** field of the **Status** structure contains the following nested structure:
 
-    type ExternalError struct {
-       // The external error code
+    type PublicError struct {
+       // The public error code consists of a 3-digit HTTP error code followed by a 3-digit proprietary error code.
        Code int32 `protobuf:"varint,1,opt,name=code" json:"code,omitempty"`
-       // Locale code (see http://www.rfc-editor.org/rfc/bcp/bcp47.txt)
-       // Note: currently the only supported Locale is "en-US". 
-       Locale string `protobuf:"bytes,1,opt,name=locale" json:"locale,omitempty"`
-       // The error message, localized by locale.
-       // The Message string is the same as the message string in the Status structure.
-       Message string `protobuf:"bytes,2,opt,name=message" json:"message,omitempty"`
+       
+       // Client's locale as received by the HERE Marketplace
+       // - ISO-639-1 standard language codes, defaults to "en".
+       // - ISO-3166-1-alpha-2 country codes
+       // Example:  "en-US" (US is the ISO 3166‑1 country code for the United States)
+       // Based on IETF language tag best practice as specified by https://tools.ietf.org/html/rfc5646
+       Locale string `protobuf:"bytes,2,opt,name=locale" json:"locale,omitempty"`
+       
+       // The localized error message for the above locale.
+       Message string `protobuf:"bytes,3,opt,name=message" json:"message,omitempty"`
     }
 
 ## RESTful JSON Error Structure ##
@@ -52,15 +56,16 @@ The GRPC error code is translated to an HTTP header status code, according to th
 GRPC Error Code	| HTTP Error Code
 :---------------|:----------------
 InvalidArgument	|StatusBadRequest (400)
-OutOfRange	|StatusBadRequest (400)
+OutOfRange	    |StatusBadRequest (400)
 PermissionDenied	|StatusForbidden (403)
 Unauthenticated	|StatusUnauthorized (401)
-NotFound	|StatusNotFound (404)
+NotFound	    |StatusNotFound (404)
 AlreadyExists	|StatusConflict (409)
 FailedPrecondition	|StatusPreconditionFailed (412)
-Internal	|StatusInternalServerError (500)
-Unimplemented	|StatusNotImplemented (501)
-Unknown	|StatusInternalServerError (500)
+Internal	    |StatusInternalServerError (500)
+Unknown	        |StatusInternalServerError (500)
+Unavailable     | StatusServiceUnavailable(503)
+DeadlineExceeded | StatusGatewayTimeout (504)
  
 ## Error Categories ##
 
