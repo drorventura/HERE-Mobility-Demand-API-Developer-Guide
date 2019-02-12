@@ -43,7 +43,7 @@ The GRPC error is translated to its RESTful JSON representation automatically by
 
 Here is an example of a JSON-formatted error:
 
-    Header Code: 404
+    Header Code: 40400
     Body:
     {
         "code": 40400,
@@ -77,7 +77,7 @@ Error Category	| Description
 **Permissions**|Authorization or authentication error.<br/><br/>Possible GRPC codes:<br/><br/>**PermissionDenied(7)** – attempt to perform an action for which the user has no permissions<br/><br/>**Unauthenticated(16)** – the user failed to be authenticated
 **Communication** | Connection error or timeout when accessing other services.<br/><br/>Possible GRPC codes:<br/><br/>**Unavailable(14)** – the service is unavailable
 **Business Logic** | The request or its data is incompatible with the current server state.<br/><br/>Possible GRPC codes:<br/><br/>**NotFound(5)** – requested item was not found (for example, a ride ID)<br/><br/>**AlreadyExists(6)** – attempt to create an entity that already exists<br/><br/>**FailedPrecondition(9)** – the request does not meet a required condition (for example, a delete was requested when delete is not allowed)<br/><br/>**Internal(13)** – other error in business logic
-**Other** 	|	Miscellaneous errors.<br/><br/>Possible GRPC codes:<br/><br/>**Internal(13)** – error in business logic<br/><br/>**Unimplemented(12)** - the endpoint is not implemented yet.
+**Other** 	|	Miscellaneous errors.<br/><br/>Possible GRPC codes:<br/><br/>**Internal(13)** – error in business logic
 
 ## Error Codes ##
 
