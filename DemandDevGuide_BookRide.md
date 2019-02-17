@@ -4,7 +4,7 @@ To book a ride, the client first requests ride offers according to the required 
 
 **To request and book a ride:**
 
-1.  Call *RideOffersRequest*. In the call parameters, the client specifies the passenger details, pickup and dropoff locations, and optionally the number of suitcases the ride must accommodate. Optionally, the client can specify a future pickup time, a desired price range and a sort order for the returned ride offers.
+1.  Call *RideOffersRequest*. In the call parameters, the client specifies the passenger details, pickup and dropoff locations, and optionally the number of suitcases the ride must accommodate. Optionally, the client can specify a future pickup time, a desired price range and a sort order for the returned ride offers. When sending the request for offers, you can specify how many offers you would like to get.
 
 >**Note:** Both calls in this procedure are nearly identical for the C2S and S2S APIs, but in the S2S calls the **user_id** is passed. In the C2S calls, the user for whom the authentication token was created is assumed implicitly for all calls.
 
