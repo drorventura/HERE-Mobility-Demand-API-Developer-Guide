@@ -41,7 +41,7 @@ Arrival). They can view several ride options, choose the one they want, and book
 
 The Demand API is a supported over the REST and GRPC protocols.
 
-**REST endpoint:** [https://demand-rest.inc-stg.solo-experiments.com](https://demand-rest.inc-stg.solo-experiments.com/)
+**REST endpoint:** [https://marketplace.mobility.here.com](https://marketplace.mobility.here.com)
 
 **GRPC endpoint:** [https://demand-grpc.inc-stg.solo-experiments.com](https://demand-grpc.inc-stg.solo-experiments.com/)
 
