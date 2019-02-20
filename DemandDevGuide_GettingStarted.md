@@ -22,7 +22,7 @@ HERE is an example of what the application key and secret values look like:�
 
 ```{"applicationKey": "Casd9nS4WUs90***cCvsurYgtpLEgm8", "applicationSecret": "QcVyN7Wq3HNqWN3DEAI0H***mibtsdUkJ_8zS0skrRHfZyzKbW0gmvjSKgnLt"}```
 
->**Note**: For security reasons, the **applicationSecret** value must not be exposed to the end user. Store he **applicationSecret** value in your server-side code and not in your client-side code. If any abuse of the **applicationSecret** is detected, your credentials will be revoked.
+>**Note**: For security reasons, the **applicationSecret** value must not be exposed to the end user. Store the **applicationSecret** value in your server-side code and not in your client-side code. If any abuse of the **applicationSecret** is detected, your credentials will be revoked.
 
 ## Authenticating Application Users ##
 
