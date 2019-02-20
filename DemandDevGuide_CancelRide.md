@@ -12,68 +12,7 @@ You may want to cancel a ride at any stage during the ride's lifecycle, followin
 Call *CancelRide*, using the **ride_id** value that you received as a response to *CreateRide*.
 You will receive a response with a CancellationInfo.status of ACCEPTED or REJECTED.
 
-----
-<details>
-<summary><b>REST C2S Example</b></summary>
 
-**Request:**
-
-    COMING SOON
-
-**Response:**
-
-	COMING SOON
-
-</details>
-
-----
-
-<details>
-<summary><b>REST S2S Example</b></summary>
-
-**Request:**
-
-    COMING SOON
-
-**Response:**
-
-	COMING SOON
-
-</details>
-
-----
-
-<details>
-<summary><b>GRPC C2S Example</b></summary>
-
-**Request:**
-
-    COMING SOON
-
-
-**Response:**
-
-    COMING SOON
-
-</details>
-
-----
-
-<details>
-<summary><b>GRPC S2S Example</b></summary>
-
-**Request:**
-
-    COMING SOON
-
-
-**Response:**
-
-    COMING SOON
-
-</details>
-
-----
 
 
 
