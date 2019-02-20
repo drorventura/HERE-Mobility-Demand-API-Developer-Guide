@@ -12,7 +12,7 @@ The RideLocation object contains the following dynamic, frequently updated infor
 - Estimated dropoff time
 - Last update time (of location details)
 
-See [Here Mobility Demand API Reference](https://github.com/Developers-Here-Mobility/Here-Mobility-Demand-API-REST) to learn more about the Ride and RideLocation objects.
+See [HERE Mobility Demand API Reference](https://github.com/Developers-Here-Mobility/Here-Mobility-Demand-API-REST) to learn more about the Ride and RideLocation objects.
 
 ## Immediate Rides vs. Future Bookings ##
 
