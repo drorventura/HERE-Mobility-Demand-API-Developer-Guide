@@ -83,7 +83,7 @@ Error Category	| Description
 
 The following table describes the error codes that Here API clients can receive:
 
-Domain|	Message | 	Code
+Domain|	Message (& Details) | 	Code
 :-----|:--------|:-------
 General 		| Invalid request 																| 400000
 Get Ride 		| Route is missing   															| 400001	
@@ -93,10 +93,10 @@ Get Ride 		| Pickup latitude is invalid. Value should be between -90 and 90.    
 Get Ride 		| Pickup longitude is invalid. Value should be between -180 and 180.    		| 400005
 Get Ride 		| Drop off location is missing   												| 400007	
 Request Ride 	| Pickup time missing from ride request 										| 400009
-Get Ride 		| Pickup cannot be booked for more than <MaxDays> days from the current date  	| 400010
+Get Ride 		| Pickup cannot be booked for more than <MaxDays> days from the current date (the pickup time is too far in the future)	| 400010
 Get Ride 		| Pickup time cannot be in the past   											| 400011	
-Get Ride 		| Maximum walking distance chosen is not supported   							| 400016
-Get Offers 		| Invalid number of changes (maximum allowed transit changes was exceeded) 		| 400017
+Get Ride 		| Maximum walking distance chosen is not supported (the given limit on walking distance	has an invalid format or value)						| 400016
+Get Offers 		| Invalid number of changes (the maximum allowed number of transit changes during the route was exceeded) 		| 400017
 Cancel Ride 	| Ride ID is invalid    														| 400018	
 Cancel Ride     | Invalid reason category format 												| 400019
 Cancel Ride     | Invalid reason category value 												| 400020
@@ -113,8 +113,8 @@ General 		| Requested item not found 														| 404000
 Create Ride		| Offer timed out  																| 404001
 Get Ride 		| The ride requested can't be found    											| 404002	
 General 		| Request timeout																| 408000
-General 		| Failed dependency																| 424000
-General	   		| Too many requests																| 429000
+General 		| Failed dependency	(an error was received from a 3rd-party package)			| 424000
+General	   		| Too many requests	(server is busy)											| 429000
 General	       	| Internal server error															| 500000
 General	       	| Not Implemented																| 501000
 
