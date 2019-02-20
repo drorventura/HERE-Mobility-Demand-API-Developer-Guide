@@ -26,7 +26,7 @@ HERE is an example of what the application key and secret values look like:�
 
 ## Authenticating Application Users ##
 
-For security reasons, when you access the HERE Mobility Demand API on behalf of your users, you will need to sign in with their username and with the Demand API App Key and App Secret values.
+For security reasons, when you access the HERE Mobility Demand API on behalf of your users, you will need to sign in with their user ID and with the Demand API App Key and App Secret values.
 
 ### Getting a Client-to-Service (C2S) Token ###
 
