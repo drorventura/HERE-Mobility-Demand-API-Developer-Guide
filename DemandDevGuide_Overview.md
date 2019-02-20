@@ -34,7 +34,7 @@ End users can request a ride while defining any special needs they may have, suc
 Arrival). They can view several ride options, choose the one they want, and book it. If the supplier's policy permits, rides may be cancelled after they're booked. Once a ride is booked, the passenger can get real-time updates about the supplier's status (on the way, at pickup location, and so on).
 
 >**Notes**:
->-   Currently only taxi suppliers (full integration) and public transportation(planning stage) are supported.
+>-   Currently only taxi and private hire suppliers (full integration) and public transportation(planning stage) are supported.
 >-   The passenger's location is stated in the ride request, and accordingly only rides from nearby suppliers are offered.
 
 ### Technical Specifications ###
