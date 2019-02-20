@@ -40,9 +40,9 @@ When calling the Client-to-Service (C2S) API, your backend server should calcula
 
 ## Sandbox and Production Environments ##
 
-You can use the HERE Mobility Sandbox platform to develop and test your app's functionality without calling the production platform. Requests to the sandbox environment are ephemeral (do not affect the "real world").
+You can use the HERE Mobility Sandbox environment to develop and test your app's functionality without calling the production platform. Requests to the sandbox environment are ephemeral (do not affect the "real world").
 
-The HERE Mobility service directs your app's calls to the sandbox or to the production environment, according to the API key you provide.
+Initially your credentials are created in the Sandbox environment, as indicated in your Demand API section at https://developer.mobility.here.com. When you're ready for production, click "Start" under "Ready for Production?" and HERE Mobility Support will handle your activation request.
 
 ## Registering a Webhook for Marketplace-Initiated Updates ##
 
