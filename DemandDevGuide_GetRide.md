@@ -82,52 +82,6 @@ Call *GetRide*, passing the **ride_id** value that you received as a response to
 
 </details>
 
-----
 
-<details>
-<summary><b>REST S2S Example</b></summary>
-
-**Request:**
-
-    COMING SOON
-
-
-**Response:**
-
-    COMING SOON
-
-</details>
-
-----
-
-<details>
-<summary><b>GRPC C2S Example</b></summary>
-
-**Request:**
-
-    COMING SOON
-
-
-**Response:**
-
-    COMING SOON
-
-</details>
-
-----
-
-<details>
-<summary><b>GRPC S2S Example</b></summary>
-
-**Request:**
-
-    COMING SOON
-
-
-**Response:**
-
-    COMING SOON
-
-</details>
 
 
