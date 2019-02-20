@@ -47,12 +47,4 @@ The Demand API is a supported over the REST and GRPC protocols.
 
 >**Note**: For a single client, requests to the Demand API must be limited to a rate of 50 requests per minute, and a total of no more than 1000 per day.
 
-### The Consumer-to-Service and Service-to-Service APIs ###
 
-HERE supports 2 versions of the Demand API:
-
--   **The Consumer-to-Service (C2S) API** -- meant to be called by a client application that supports a single end user, such as a mobile phone app.
-
--   **The Service-to-Service (S2S) API** -- meant to be called by a client application that supports multiple end users, such as a public kiosk device.
-
-The 2 APIs are nearly identical in terms of syntax and workflow. The main difference is that the service-to-service request messages contain an additional user ID parameter, to enable managing rides for several users. Calls made to the consumer-to-service API are all assumed to refer to the same single user.
