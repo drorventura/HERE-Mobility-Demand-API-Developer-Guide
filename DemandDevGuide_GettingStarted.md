@@ -38,12 +38,6 @@ When calling the Client-to-Service (C2S) API, your backend server should calcula
 >-   The **application_key** and **user_id** values are plain strings (not converted to Base64 as when providing them to the hash function)
 >-   The **expiration** value determines when the authentication token expires (in seconds, since Epoch).
 
-### Getting a Service-to-Service (S2S) Token ###
-
-Here is an example of how to create a Service-to-Service (S2S) token:
-
-```GET accounts.v1/application/s2s/token?application_key=<application_key>&&application_secret=<application_secret>```
-
 ## Sandbox and Production Environments ##
 
 You can use the HERE Mobility Sandbox platform to develop and test your app's functionality without calling the production platform. Requests to the sandbox environment are ephemeral (do not affect the "real world").
