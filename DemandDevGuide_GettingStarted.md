@@ -30,7 +30,7 @@ For security reasons, when you access the HERE Mobility Demand API on behalf of 
 
 ### Getting a Client-to-Service (C2S) Token ###
 
-When calling the Client-to-Service (C2S) API, the best practice is for your backend server to sign in to the Demand API when the user logs in, and send the signed hash value to the app. The app should then pass the hash value to the Demand API. See the REST call in the following example:
+When calling the Client-to-Service (C2S) API, your backend server should calculate a signed hash value (with limited expiration) and pass it to the app. The app should then pass the hash value to the Demand C2S API. This is because you are not allowed to pass the application secret value to your client side. See the REST call in the following example:
 
 ```GET accounts.v1/application/c2s/token?application_key=<application_key>&user_id=<user_id>&expiration=<expiration>&hash=<hash>```
 
