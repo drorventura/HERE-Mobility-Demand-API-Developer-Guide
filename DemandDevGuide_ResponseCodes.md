@@ -81,7 +81,7 @@ Error Category	| Description
 
 ## Error Codes ##
 
-The following table describes the error codes that Here API clients can receive:
+The following table describes the error codes that HERE API clients can receive:
 
 Domain|	Message (& Details) | 	Code
 :-----|:--------|:-------
